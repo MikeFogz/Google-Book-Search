@@ -1,16 +1,18 @@
 const router = require("express").Router();
-const { test } = require("../controllers/bookController")
+const booksController = require("../controllers/bookController")
 
 router.get("/api/test", test);
 
 // return all saved books
-router.get("/api/books", );
+// save new book to db
+router.route("/api/books")
+    .get(booksController.findAll)
+    .post(booksController.create);
 
-//save new book to db
-router.post("/api/books", test);
 
 //delete book from db
-router.delete("/api/books/:id", test);
+router.route("/api/books/:id")
+    .delete(booksController.remove);
 
 //save new book to db
 router.get("*", test);
