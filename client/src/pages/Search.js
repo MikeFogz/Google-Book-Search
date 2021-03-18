@@ -29,9 +29,7 @@ function Books() {
             </Jumbotron>
             <form>
               <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Book</FormBtn>
+              <FormBtn>Search</FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
